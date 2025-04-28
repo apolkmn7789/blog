@@ -23,6 +23,8 @@ public class BlogService {
     }
     // 데이터 베이스에 있는 모든 글을 가져오는 메서드
     public List<Article> findAll(){
+//        List<Article> articles = blogRepository.findAll();
+//        System.out.println(articles);
         return blogRepository.findAll();
     }
     public Article findById(Long id){
