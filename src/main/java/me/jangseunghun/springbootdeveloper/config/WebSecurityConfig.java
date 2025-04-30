@@ -61,7 +61,7 @@ public class WebSecurityConfig {
                                                        BCryptPasswordEncoder bCryptPasswordEncoder, UserDetailService userDetailService)
         throws Exception{
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
-        authProvider.setUserDetailsService(userDetailService); // 사용자 정보 서비스 설정
+        authProvider.setUserDetailsService(userService); // 사용자 정보 서비스 설정
         authProvider.setPasswordEncoder(bCryptPasswordEncoder);
         return new ProviderManager(authProvider);
     }
