@@ -1,10 +1,10 @@
 package me.jangseunghun.springbootdeveloper.dto;
 
 import lombok.Getter;
-import org.springframework.stereotype.Service;
+import lombok.Setter;
 
 @Getter
-@Service
+@Setter
 public class AddUserRequest {
     private String email;
     private String password;

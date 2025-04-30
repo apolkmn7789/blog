@@ -2,6 +2,7 @@ package me.jangseunghun.springbootdeveloper.config;
 
 import lombok.RequiredArgsConstructor;
 import me.jangseunghun.springbootdeveloper.service.UserDetailService;
+import me.jangseunghun.springbootdeveloper.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,6 +25,7 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 @RequiredArgsConstructor
 public class WebSecurityConfig {
 
+    private final UserDetailService userService;
     private final UserDetailService userDetailService;
 
     // 스프링 시큐리티 기능 비활성화
