@@ -26,6 +26,12 @@ dependencies {
     testImplementation 'org.assertj:assertj-core:3.24.2'
 
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // 스프링 시큐리티를 사용하기 위한 스타터
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    // 타임리프에서 스프링 시큐리티를 사용하기 위한 의존성
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springSecurity6'
+    // 스프링 시큐리티 테스트
+    testImplementation 'org.springframework.security:spring-security-test'
 }
 
 test {
