@@ -7,6 +7,8 @@ import me.jangseunghun.springbootdeveloper.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.nio.channels.IllegalChannelGroupException;
+
 @RequiredArgsConstructor
 @Service
 public class UserService {
@@ -20,5 +22,10 @@ public class UserService {
         // 패스워드 암호화
                 .password(bCryptPasswordEncoder.encode(dto.getPassword()))
                 .build()).getId();
+    }
+
+    public User findById(Long userId){
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("Unexpected user"));
     }
 }

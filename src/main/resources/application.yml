@@ -15,7 +15,9 @@ spring:
     defer-datasource-initialization: true
     # JPA가 SQL을 어떤 DB용 문법으로 생성할지 결정
     database-platform: org.hibernate.dialect.MySQL57Dialect
-
+jwt:
+  issuer: ajufresh@gamil.com
+  secret_key: study-springboot
   sql:
     init:
       mode: always
